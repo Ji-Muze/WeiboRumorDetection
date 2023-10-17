@@ -6,6 +6,7 @@
 注：上述链接已不再公开
 * 语言：Python
 * 使用的模型除sklearn中的常见函数外，还有LSTM和GRU
+* 原项目代码保存在originalfila文件夹中
 
 ## 数据集介绍
 数据集链接：https://github.com/thunlp/Chinese_Rumor_Dataset
@@ -44,9 +45,10 @@
   *  **text**: 转发/评论的文字内容（若部分用户转发时不添加评论内容，该项无内容）
   *  **data**: 该转发/评论的发布时间（格式如：2014-07-24 14:37:38）
 
-## 数据集预处理（rumor_all_data copy.ipynb 与 rumor_jieba_bayes copy.ipynb）
+## 数据集预处理（rumor_all_data.ipynb 与 rumor_jieba_bayes.ipynb）
 
-### 1.rumor_all_data copy.ipynb将微博内容固定为特殊格式，并保存为txt文件
+### 1.rumor_all_data.ipynb将微博内容固定为特殊格式，并保存为txt文件
+* 使用该文件解压数据集时，有可能会造成Chinese_Rumor_Dataset-master文件夹重复，需注意
 
 ### 2.分词与索引化
 
@@ -57,7 +59,7 @@
 
 ### 3.准备Embedding矩阵
 
-## 模型搭建与训练（rumor_pkuseg_gensim_LSTM_GRU copy.ipynb）
+## 模型搭建与训练（rumor_pkuseg_gensim_LSTM_GRU.ipynb）
 
 * 划分测试集与训练集；
 * 搭建网络结构：
@@ -79,4 +81,3 @@
 
 * 训练模型；
 * 模型评价：训练集accuracy=87.54%，测试集accuracy=85.25%。
-
